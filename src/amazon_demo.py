@@ -2,7 +2,7 @@ from sentimentLDA import *
 import os
 import urllib
 import tarfile
-vocabSize = 50000
+vocab_size = 50000
 
 
 def readData():
@@ -32,4 +32,4 @@ reviews = readData()
 sampler = SentimentLDAGibbsSampler(1, 2.5, 0.1, 0.3)
 sampler.run(reviews, 200, "./../data/sorted_data_acl/dvd_reviews.dll", True)
 
-sampler.getTopKWords(25)
+sampler.get_top_k_words(25)
